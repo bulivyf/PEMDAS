@@ -3,6 +3,13 @@ import math
 
 class great_circle_calculator(object):
     """
+    Execution:
+    python pemdasq1.py <minlat> <maxlat> <minlng> <maxlng>
+        Constraints:
+            Latitude and longitude values are in decimal degrees as
+                abs(0<=latitudes<89) and abs(0<=longitudes<180)
+                minlat < maxlat and minlng < maxlng
+
     Input:
     Reference grid bounds which estimate locations on the surface of the earth.
 
@@ -11,12 +18,15 @@ class great_circle_calculator(object):
     Displayed values are to three decimal places.
 
     ASSUMPTIONS:
-    1. values entered wont be vastly different (display content will be hard to read).
+    1. entered values shouldnt be vastly different (display content will be hard to read).
+    2. code is written for readability, not for performance; display grid points arent expected to require too much calc.
 
     WHY impl this way?:
     Problem defined: find an approach to return a (lat, long) destination point 1km away from src at a given bearing.
+    Iterate along the rows at 90 degree, 1km increments.
+
     Discussion
-    This is new territory for me, so I envisaged good answers already existed.  
+    This is new territory for me, so envisaged good answers already existed.  
     So aimed to research rather than solve directly.  From research, absorb, implement then test.
 
     Research: 
@@ -26,8 +36,8 @@ class great_circle_calculator(object):
 
     Implementation choice:
     * 'great circle' was indicated as a good estimation approach.
-    My initial calculations were wildly off, in my represenation of the formula (grr: radians).  
-    So looked up how others performed similar; I found the following:
+    My initial calculations were wildly off, in the represenation of the formula (grr: radians).  
+    So looked up how others performed similar; finding the following as useful:
         http://movable-type.co.uk/scripts/latlong.html
         which helped tremendously.
     Later on, the discovery of the following Python package promised a quicker/better (well tested) solution:
