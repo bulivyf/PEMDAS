@@ -95,43 +95,22 @@ class great_circle_calculator(object):
         return float(radians) * 180.0 / math.pi
 
 
-# UTILITY FUNCTION
+# UTILITY FUNCTIONS
 def display_command_line_options():
     return print ("Command line use:\n" \
-                    "\tpython pemdasq1.py <minlat> <maxlat> <minlng> <maxlng>\n" \
-                    "Where latitude and longitude values are in decimal degrees with ranges abs(0<=latitudes<89) and abs(0<=longitudes<180)" \
-                    "Purpose: Output a gridded space of (lat, long) points that span across the Earth surface in 1 km increments." \
-                    "\nDescription: Conceptual output starts bottom left of grid and projects (lat,long) points going Eastward. " \
-                    "\nEach console displayed consecutive row is a 1 km Northward step from the minlat value upwards on the Earth surface, toward maxlat.\n\n" \
-                    "Example command: python pemdasq1.py 0 .1 0 .1")
-
-# MAIN
-def is_valid_entries(entry1,entry2,entry3,entry4):
-    return \
-        entry1 < entry2 and entry3 < entry4 and \
-        math.fabs(entry1) < 89.0 and math.fabs(entry2) < 89.0 and \
-        math.fabs(entry3) < 180.0 and math.fabs(entry4) < 180.0
+                    "\tpython pemdasq1.py <minlat> <maxlat> <minlng> <maxlng>" \
+                    "\nConstraints:"\
+                    "\n\tLatitude and longitude values are in decimal degrees with ranges abs(0<=latitudes<89) and abs(0<=longitudes<180)" \
+                    "\n\tminlat < maxlat and minlng < maxlng" \
+                    "\nPurpose: "\
+                    "\n\tOutput a gridded space of (lat, long) points that span across the Earth surface in 1 km increments." \
+                    "\nDescription: "\
+                    "\n\tConceptual output starts bottom left of grid and projects (lat,long) points going Eastward. " \
+                    "\n\tAt the end of each point row the next conceptual row goes upward on the Earth surface."\
+                    "\n\tNote: Console displayed rows are displayed in reverse order to the described conceptualized view."\
+                    "\nExample: python pemdasq1.py 0 .1 0 .1")
                 
-
-if __name__ == '__main__':
-    minlat = 0.0
-    maxlat = 0.1
-    minlng = 0.0
-    maxlng = 0.1
-    print ('ARGS provided: ',str(sys.argv),"\n")
-    if len(sys.argv) == 5:
-        if is_valid_entries(float(sys.argv[1]),float(sys.argv[2]),\
-                float(sys.argv[3]), float(sys.argv[4])):
-            minlat = float(sys.argv[1])
-            maxlat = float(sys.argv[2])
-            minlng = float(sys.argv[3])
-            maxlng = float(sys.argv[4])
-        else: 
-            print("ERROR: Invalid values...")
-            display_command_line_options()
-    else:
-        display_command_line_options()
-
+def create_grid():
     grc = great_circle_calculator()
     lat = minlat
     latInBounds = True
@@ -151,5 +130,34 @@ if __name__ == '__main__':
         grc.set_src_lat_lng(lat, lng)
         lat,lng = grc.calc_dest_latlng(0,1)
         print()
+    
+def is_valid(entry1,entry2,entry3,entry4):
+    return entry1 < entry2 and entry3 < entry4 and \
+        math.fabs(entry1) < 89.0 and math.fabs(entry2) < 89.0 and \
+        math.fabs(entry3) < 180.0 and math.fabs(entry4) < 180.0
+
+# MAIN
+if __name__ == '__main__':
+    minlat = 0.0
+    maxlat = 0.1
+    minlng = 0.0
+    maxlng = 0.1
+    print ('ARGS provided: ',str(sys.argv),"\n")
+    if len(sys.argv) == 5:
+        entry1 = float(sys.argv[1])
+        entry2 = float(sys.argv[2])
+        entry3 = float(sys.argv[3])
+        entry4 = float(sys.argv[4])
+        if is_valid(entry1, entry2, entry3, entry4):
+            minlat = entry1
+            maxlat = entry2
+            minlng = entry3
+            maxlng = entry4
+        else: 
+            print("ERROR: Invalid values...")
+            display_command_line_options()
+    else:
+        display_command_line_options()
+    create_grid()
 
     print("\nDone")
