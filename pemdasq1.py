@@ -18,12 +18,12 @@ class great_circle_calculator(object):
     Displayed values are to three decimal places.
 
     ASSUMPTIONS:
-    1. entered values shouldnt be vastly different (display content will be hard to read).
-    2. code is written for readability, not for performance; display grid points arent expected to require too much calc.
+    1. entered values shouldn't be vastly different (display content will be hard to read).
+    2. code is written for readability, not for performance; display grid points aren't expected to require too much calc.
 
     WHY impl this way?:
     Problem defined: find an approach to return a (lat, long) destination point 1km away from src at a given bearing.
-    Iterate along the rows at 90 degree, 1km increments.
+    Iterate along the rows with a bearing of 90 degree, 1km increments.
 
     Discussion
     This is new territory for me, so envisaged good answers already existed.  
@@ -36,7 +36,7 @@ class great_circle_calculator(object):
 
     Implementation choice:
     * 'great circle' was indicated as a good estimation approach.
-    My initial calculations were wildly off, in the represenation of the formula (grr: radians).  
+    My initial calculations were wildly off, in the representation of the formula (grr: radians).  
     So looked up how others performed similar; finding the following as useful:
         http://movable-type.co.uk/scripts/latlong.html
         which helped tremendously.
@@ -45,7 +45,7 @@ class great_circle_calculator(object):
         https://github.com/mrJean1/PyGeodesy/tree/master/dist
     Conclusion:
     It's all about entering the right search terms in the web browser.
-    All in all an interesting problem to solve.  With keeping for future ref.
+    All in all, an interesting problem to solve.  Worth keeping for future ref.
     """
     # latitude (phi)
     src_lat = 0.0 
