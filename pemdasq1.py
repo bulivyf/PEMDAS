@@ -95,7 +95,24 @@ class great_circle_calculator(object):
         return float(radians) * 180.0 / math.pi
 
 
+# UTILITY FUNCTION
+def display_command_line_options():
+    return print ("Command line use:\n" \
+                    "\tpython pemdasq1.py <minlat> <maxlat> <minlng> <maxlng>\n" \
+                    "Where latitude and longitude values are in decimal degrees with ranges abs(0<=latitudes<89) and abs(0<=longitudes<180)" \
+                    "Purpose: Output a gridded space of (lat, long) points that span across the Earth surface in 1 km increments." \
+                    "\nDescription: Conceptual output starts bottom left of grid and projects (lat,long) points going Eastward. " \
+                    "\nEach console displayed consecutive row is a 1 km Northward step from the minlat value upwards on the Earth surface, toward maxlat.\n\n" \
+                    "Example command: python pemdasq1.py 0 .1 0 .1")
+
 # MAIN
+def is_valid_entries(entry1,entry2,entry3,entry4):
+    return \
+        entry1 < entry2 and entry3 < entry4 and \
+        math.fabs(entry1) < 89.0 and math.fabs(entry2) < 89.0 and \
+        math.fabs(entry3) < 180.0 and math.fabs(entry4) < 180.0
+                
+
 if __name__ == '__main__':
     minlat = 0.0
     maxlat = 0.1
@@ -103,17 +120,17 @@ if __name__ == '__main__':
     maxlng = 0.1
     print ('ARGS provided: ',str(sys.argv),"\n")
     if len(sys.argv) == 5:
-        minlat = float(sys.argv[1])
-        maxlat = float(sys.argv[2])
-        minlng = float(sys.argv[3])
-        maxlng = float(sys.argv[4])
+        if is_valid_entries(float(sys.argv[1]),float(sys.argv[2]),\
+                float(sys.argv[3]), float(sys.argv[4])):
+            minlat = float(sys.argv[1])
+            maxlat = float(sys.argv[2])
+            minlng = float(sys.argv[3])
+            maxlng = float(sys.argv[4])
+        else: 
+            print("ERROR: Invalid values...")
+            display_command_line_options()
     else:
-        print ("Command line use:\n" \
-                "\tpython pemdasq1.py <minlat> <maxlat> <minlng> <maxlng>\n" \
-                "Purpose: Output a gridded space of (lat, long) points that span across the earth surface in 1km increments." \
-                "\nStarts bottom left of grid, projects (lat,long) points going Eastward. "\
-                "\nEach consecutive row is a 1km Northern latitude step from the minlat value upwards, to maxlat.\n\n" \
-                "Example: python pemdasq1.py 0 .1 0 .1")
+        display_command_line_options()
 
     grc = great_circle_calculator()
     lat = minlat
