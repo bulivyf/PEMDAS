@@ -119,20 +119,20 @@ if __name__ == '__main__':
     lat = minlat
     latInBounds = True
     while(latInBounds):
+        if lat > maxlat:
+            latInBounds = False
         lng = minlng
         lngInBounds = True
         print (">>>:(%6.3f,%7.3f) " % (lat, lng), end='')
         row_lat = lat
         while (lngInBounds):
+            if lng > maxlng:
+                lngInBounds = False
             grc.set_src_lat_lng(row_lat, lng)
             row_lat,lng = grc.calc_dest_latlng(90,1)
             print("(%6.3f,%7.3f) " % (row_lat, lng), end='')
-            if lng > maxlng:
-                lngInBounds = False
         grc.set_src_lat_lng(lat, lng)
         lat,lng = grc.calc_dest_latlng(0,1)
-        if lat > maxlat:
-            latInBounds = False
         print()
 
     print("\nDone")
