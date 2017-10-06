@@ -2,13 +2,13 @@ import sys
 
 class team_attributes(object):
     """
-    EXECUTION
+    EXECUTION:
     python pemdasq2.py <filename.csv>
 
     INPUT:
     Valid csv file.
 
-    Output:
+    OUTPUT:
     1. average​ ​height​ ​in​ ​inches​ ​of​ ​all outfielders,​ ​
     2. maximum​ ​age​ ​of​ ​the​ ​team,​ 
     3. number​ ​of​ ​players​ ​with​ ​a​ ​last​ ​name​ ​starting​ ​with​ ​the​ ​letter ‘B’.​
