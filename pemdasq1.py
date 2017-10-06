@@ -20,6 +20,8 @@ class great_circle_calculator(object):
     ASSUMPTIONS:
     1. entered values shouldn't be vastly different (display content will be hard to read).
     2. code is written for readability, not for performance; display grid points aren't expected to require too much calc.
+    3. Users will enter the value type for the decimal degree args within the command line; no type checking is performed.
+    4. Grids are not placed over the N/S poles or over the reverse side of the Earth (past the +-180 degree of longitude); TODO
 
     WHY impl this way?:
     Problem defined: find an approach to return a (lat, long) destination point 1km away from src at a given bearing.
