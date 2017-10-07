@@ -3,17 +3,17 @@ import math
 
 class great_circle_calculator(object):
     """
-    Execution:
+    EXECUTION:
     python pemdasq1.py <minlat> <maxlat> <minlng> <maxlng>
         Constraints:
             Latitude and longitude values are in decimal degrees as
                 abs(0<=latitudes<89) and abs(0<=longitudes<180)
                 minlat < maxlat and minlng < maxlng
 
-    Input:
+    INPUT:
     Reference grid bounds which estimate locations on the surface of the earth.
 
-    Output:
+    OUTPUT:
     Printout to console of (lat,long) points at 1km interval within provided grid bounds.
     Displayed values are to three decimal places.
 
@@ -27,7 +27,7 @@ class great_circle_calculator(object):
     Problem defined: find an approach to return a (lat, long) destination point 1km away from src at a given bearing.
     Iterate along the rows with a bearing of 90 degree, 1km increments.
 
-    Discussion
+    Discussion:
     This is new territory for me, so envisaged good answers already existed.  
     So aimed to research rather than solve directly.  From research, absorb, implement then test.
 
