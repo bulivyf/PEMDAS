@@ -4,13 +4,13 @@ Date: Oct 7th, 2017
 
 
 INTRODUCTION
-The promise code is realtes to a second optional problem posed by PEMDAS.
+The "promise.*" code is relates to a second optional problem posed by PEMDAS.
 
 Objectives:
-1. Write a rudimentary web based response code that provides lists of random numbers; provide a URL as a REST endpoint.
+1. Provide a REST endpoint: Write rudimentary web based response code that provides lists of random numbers;
 2. Write Javascript that:
 * Calls the REST endpoint (three times), gets the lists and totals the values as they arrive.
-* Ignores any list responses that takes longer than 100ms. TODO
+* Ignore any list responses that takes longer than 100ms. 
 
 DEVELOPER NOTES
 Solution for the web endpoint was to use Python Flask.  Its CORS functionality is simple to use and configure.  
