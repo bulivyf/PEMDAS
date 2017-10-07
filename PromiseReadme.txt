@@ -4,7 +4,7 @@ Date: Oct 7th, 2017
 
 
 INTRODUCTION
-The "promise.*" code is relates to a second optional problem posed by PEMDAS.
+The "promise.*" code relates to a second optional problem posed by PEMDAS.
 
 Objectives:
 1. Provide a REST endpoint: Write rudimentary web based response code that provides lists of random numbers;
