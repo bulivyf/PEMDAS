@@ -21,7 +21,8 @@ def index():
     resp.headers['Access-Control-Allow-Methods'] = '*'
     resp.headers['Access-Control-Allow-Domain'] = '*'
     resp.headers['Access-Control-Allow-Credentials'] = True
-    sleep(0.15)
+    sleep(random.uniform(0.001,0.200))
+    # sleep(.2)
     print(r)
     return resp
 
