@@ -1,4 +1,4 @@
-Subject: Example Javascript Code
+Read the javaSubject: Example Javascript Code
 Author: E.M.Fraser
 Date: Oct 7th, 2017
 
@@ -29,4 +29,4 @@ Test this by navigating to http://localhost:5000/randnums in the webbrowser.
 You'll see a list of integers displayed per page refresh.
 2. To test the javascript (promise.js), use the provided promise.html file in a webbrowser.
 Resulting display will include the total of the three endpoint calls.
-
+Read comments in promise.js for more information on assumptions etc.
