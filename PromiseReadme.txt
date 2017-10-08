@@ -1,6 +1,6 @@
-Read the javaSubject: Example Javascript Code
+8Read the javaSubject: Example Javascript Code
 Author: E.M.Fraser
-Date: Oct 7th, 2017
+Date: Oct 8th, 2017
 
 
 INTRODUCTION
