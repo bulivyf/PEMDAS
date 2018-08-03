@@ -1,0 +1,39 @@
+Problem 1  Python challenge
+
+The​ ​idea​ ​behind​ ​these​ ​challenge​ ​questions​ ​is​ ​to​ ​gain​ ​an​ ​understanding​ ​of​ ​how​ ​you​ ​approach​ ​a problem.​ ​We​ ​are​ ​curious​ ​to​ ​see​ ​how​ ​you​ ​would​ ​set​ ​up​ ​a​ ​script​ ​to​ ​execute​ ​the​ ​following functions.​ ​Please​ ​use​ ​Python,​ ​comment​ ​your​ ​code,​ ​tell​ ​us​ ​how​ ​to​ ​execute​ ​the​ ​code​ ​for​ ​the desired​ ​result,​ ​provide​ ​a​ ​brief​ ​description​ ​of​ ​why​ ​you​ ​implemented​ ​it​ ​this​ ​way,​ ​and​ ​list​ ​any assumptions​ ​that​ ​you​ ​made.​ ​We​ ​ask​ ​that​ ​you​ ​complete​ ​both​ ​Python​ ​challenges. 
+ 
+ Challenge​ ​1: 
+ The​ ​PEMDAS​ ​back-end​ ​developers​ ​commonly​ ​interact​ ​with​ ​gridded​ ​meteorological​ ​data​ ​and apply​ ​complex​ ​logic​ ​to​ ​geospatial​ ​questions.​ ​Create​ ​a​ ​script​ ​that​ ​will​ ​accept​ ​minimum​ ​latitude, maximum​ ​latitude,​ ​minimum​ ​longitude,​ ​maximum​ ​longitude​ ​and​ ​output​ ​a​ ​1km​ ​resolution​ ​grid​ ​in decimal​ ​degrees.​ ​You​ ​will​ ​need​ ​to​ ​take​ ​into​ ​account​ ​the​ ​changes​ ​in​ ​latitude​ ​across​ ​the​ ​grid.  ● Rows​ ​should​ ​be​ ​parallel​ ​to​ ​latitude​ ​lines ● The​ ​first​ ​column​ ​should​ ​be​ ​parallel​ ​to​ ​the​ ​minimum​ ​longitude ● The​ ​grid​ ​should​ ​be​ ​sized​ ​such​ ​that​ ​that​ ​last​ ​row​ ​equals​ ​or​ ​exceeds​ ​the​ ​maximum​ ​latitude and​ ​each​ ​point​ ​of​ ​the​ ​last​ ​column​ ​equals​ ​or​ ​exceeds​ ​the​ ​maximum​ ​longitude. 
+ 
+ Challenge​ ​2:  
+ Create​ ​a​ ​script​ ​that​ ​accepts​ ​a​ ​csv​ ​data​ ​file​ ​formatted​ ​like​ ​the​ ​information​ ​below​ ​regarding​ ​a baseball​ ​team.​ ​Then,​ ​provide​ ​the​ ​following​ ​information​ ​as​ ​output:​ ​average​ ​height​ ​in​ ​inches​ ​of​ ​all outfielders,​ ​maximum​ ​age​ ​of​ ​the​ ​team,​ ​number​ ​of​ ​players​ ​with​ ​a​ ​last​ ​name​ ​starting​ ​with​ ​the​ ​letter ‘B’.​ ​​ ​This​ ​will​ ​not​ ​be​ ​the​ ​exact​ ​data​ ​that​ ​we​ ​use,​ ​but​ ​the​ ​columns​ ​will​ ​be​ ​formatted​ ​the​ ​same. 
+ 
+ Name,​ ​Team,​ ​Position,​ ​Height(inches),​ ​Weight(lbs),​ ​Age 
+ Adam​ ​Donachie,​ ​BAL,​ ​Catcher,​ ​74,​ ​180,​ ​22.99 
+ Paul​ ​Bako,​ ​BAL,​ ​Catcher,​ ​74,​ ​215,​ ​34.69 
+ Ramon​ ​Hernandez,​ ​BAL,​ ​Catcher,​ ​72,​ ​210,​ ​30.78 
+ Kevin​ ​Millar,​ ​BAL,​ ​First​ ​Baseman,​ ​72,​ ​210,​ ​35.43 
+ Chris​ ​Gomez,​ ​BAL,​ ​First​ ​Baseman,​ ​73,​ ​188,​ ​35.71 
+ Brian​ ​Roberts,​ ​BAL,​ ​Second​ ​Baseman,​ ​69,​ ​176,​ ​29.39 
+ Miguel​ ​Tejada,​ ​BAL,​ ​Shortstop,​ ​69,​ ​209,​ ​30.77 
+ Melvin​ ​Mora,​ ​BAL,​ ​Third​ ​Baseman,​ ​71,​ ​200,​ ​35.07 
+ Aubrey​ ​Huff,​ ​BAL,​ ​Third​ ​Baseman,​ ​76,​ ​231,​ ​30.19 
+ Adam​ ​Stern,​ ​BAL,​ ​Outfielder,​ ​71,​ ​180,​ ​27.05 
+ Jeff​ ​Fiorentino,​ ​BAL,​ ​Outfielder,​ ​73,​ ​188,​ ​23.88 
+ Freddie​ ​Bynum,​ ​BAL,​ ​Outfielder,​ ​73,​ ​180,​ ​26.96 
+ Nick​ ​Markakis,​ ​BAL,​ ​Outfielder,​ ​74,​ ​185,​ ​23.29 
+ 
+ 
+Problem 2  Frontend Challenge (HTML/javascript)_
+
+Keeping​ ​Promises 
+ 
+ Write​ ​a​ ​function​ ​that​ ​will​ ​sum​ ​collections​ ​of​ ​integers​ ​into​ ​a​ ​single​ ​value.​ ​It​ ​must​ ​observe​ ​the following​ ​constraints: 
+ 
+ 1. It​ ​must​ ​make​ ​3​ ​calls​ ​to​ ​the​ ​same​ ​RESTful​ ​endpoint 
+ 2. Each​ ​call​ ​returns​ ​a​ ​random​ ​array​ ​of​ ​integers 
+ 3. Sometimes​ ​one​ ​or​ ​more​ ​of​ ​the​ ​calls​ ​will​ ​not​ ​return​ ​in​ ​under​ ​100ms​ ​(i.e.,​ ​it​ ​is​ ​invalid) 
+ 4. The​ ​array​ ​of​ ​integers​ ​returned​ ​from​ ​each​ ​valid​ ​call​ ​should​ ​be​ ​added​ ​to​ ​a​ ​single​ ​“global” sum 
+ 5. The​ ​array​ ​of​ ​integers​ ​returned​ ​from​ ​an​ ​invalid​ ​call​ ​should​ ​be​ ​ignored,​ ​except​ ​in​ ​the case​ ​where​ ​two​ ​invalid​ ​calls​ ​are​ ​the​ ​first​ ​to​ ​return,​ ​in​ ​which​ ​case​ ​you​ ​should​ ​ignore​ ​the return​ ​of​ ​the​ ​third​ ​call​ ​and​ ​consider​ ​the​ ​first​ ​two​ ​calls​ ​valid 6. It​ ​must​ ​return​ ​the​ ​global​ ​sum​ ​once​ ​conditions​ ​1-4​ ​are​ ​satisfied 
+
+You​ ​should​ ​minimize,​ ​as​ ​much​ ​as​ ​possible,​ ​any​ ​unnecessary​ ​wait​ ​time.​ ​It’s​ ​strongly​ ​advised​ ​you create​ ​your​ ​own​ ​tests/input​ ​to​ ​run​ ​against​ ​your​ ​implementation.​ ​It​ ​is​ ​recommended​ ​you implement​ ​your​ ​solution​ ​in​ ​ES6. 
