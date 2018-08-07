@@ -24,7 +24,7 @@ The​ ​idea​ ​behind​ ​these​ ​challenge​ ​questions​ ​is
  Nick​ ​Markakis,​ ​BAL,​ ​Outfielder,​ ​74,​ ​185,​ ​23.29 
  
  
-Problem 2  Frontend Challenge (HTML/javascript)_
+Problem 2  Frontend Challenge (HTML/javascript)
 
 Keeping​ ​Promises 
  
